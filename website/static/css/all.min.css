@@ -6141,3 +6141,14 @@
 .fas {
     font-weight: 900
 }
+
+.whatsapp-link {
+  font-size: 22px;
+  color: #25d366;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.whatsapp-link:hover {
+  color: #1ebe5d;
+}

@@ -7,6 +7,98 @@
 {% endblock %}
 
 {% block main %}
+<style>
+  /* Layout */
+.about_text_center_user {
+  gap: 16px;
+}
+
+.about_text_center_user_img {
+  width: 90px;
+  height: 90px;
+}
+
+.about_text_center_user_text h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.about_text_center_user_text h3 span {
+  font-size: 13px;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+/* Call row */
+.call_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.call_icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #b7d7b0; /* matches your green tone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.phone_link {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Actions */
+.contact_actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.contact_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Call button */
+.call_btn {
+  background: #ffffff;
+  color: #000;
+}
+
+/* WhatsApp button */
+.whatsapp_btn {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+}
+
+.contact_btn:hover {
+  opacity: 0.9;
+}
+
+/* Mobile spacing */
+@media (max-width: 576px) {
+  .contact_actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+</style>
   <!-- ===================================== BANNER START ===================================== -->
   <section class="banner">
     <div class="row banner_slider">
@@ -151,29 +243,72 @@
               </div>
             </div>
             <div class="col-12">
-              <div class="about_text">
-                <div class="about_text_center">
-                  <p>Therapeutic massages and physiotherapy personalized rehabilitation...private space...thinking about the client's privacy</p>
-                  <div class="about_text_center_user d-flex flex-wrap">
-                    <div class="about_text_center_user_img">
-                      <img src="{% static 'images/about_small_img.png' %}" alt="about" class="img-fluid w-100" />
-                    </div>
-                    <div class="about_text_center_user_text">
-                      <h3>David Smith <span>(CEO Of Banfax Spa Salon)</span></h3>
-                      <div class="about_text_center_user_call d-flex flex-wrap">
-                        <span><i class="fas fa-phone-alt"></i></span>
-                        <p>
-                          Call For Booking Appointment details: <a href="callto:1234567890">+5999-5150313</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla .</p>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a class="common_btn mt_25" href="{% url 'about' %}">Read More</a>
-              </div>
+  <div class="about_text">
+    <div class="about_text_center">
+      <p>
+        Therapeutic massages and physiotherapy personalized rehabilitation...private space...thinking about the client's privacy
+      </p>
+
+      <div class="about_text_center_user d-flex flex-wrap align-items-center">
+        <!-- Image -->
+        <div class="about_text_center_user_img">
+          <img src="{% static 'images/about_small_img.png' %}" alt="about" class="img-fluid w-100" />
+        </div>
+
+        <!-- Text -->
+        <div class="about_text_center_user_text">
+          <h3>Maria <span>(CEO Of SuaveManta)</span></h3>
+
+          <!-- Call info -->
+          <div class="about_text_center_user_call">
+            <div class="call_row d-flex align-items-center">
+              <span class="call_icon">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+
+              <p>
+                Call For Booking Appointment Details:
+                <a href="tel:+59995150313" class="phone_link">+599 9 515 0313</a>
+              </p>
             </div>
+
+            <!-- Actions -->
+            <div class="contact_actions">
+              <a href="tel:+59995150313" class="contact_btn call_btn">
+                <i class="fas fa-phone-alt"></i>
+                Call
+              </a>
+
+              <a
+                href="https://wa.me/59995150313?text=Hola%20Suavemanta%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20terapias."
+                target="_blank"
+                rel="noopener"
+                class="contact_btn whatsapp_btn"
+              >
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="description">
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <p class="description">
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <a class="common_btn mt_25" href="{% url 'about' %}">Read More</a>
+  </div>
+</div>
+
+            
           </div>
         </div>
         <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-duration="1s">
