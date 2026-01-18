@@ -1,0 +1,104 @@
+{% extends 'website/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  SuaveManta | Contact
+{% endblock %}
+
+{% block main %}
+  <!-- ===================================== BREADCRUMB START ===================================== -->
+  <section class="breadcrumb_area" style="background: url({% static 'images/contact.webp' %});">
+    <div class="breadcrumb_overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="breadcrumb_text">
+              <h1>contact us</h1>
+              <ul>
+                <li>
+                  <a href="#"><i class="fas fa-home"></i> home</a>
+                </li>
+                <li>
+                  <a href="#">contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================================== BREADCRUMB END ===================================== -->
+
+  <!-- ===================================== CONTACT US START ===================================== -->
+  <section class="contact mt_95 xs_mt_45">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+          <div class="contact_info">
+            <span><i class="fas fa-map-marker-alt"></i></span>
+            <h3>Our Location</h3>
+            <p>19, 49 Kaya Isaac, Willemstad, Curaçao</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+          <div class="contact_info">
+            <span><i class="fas fa-envelope"></i></span>
+            <h3>Email Us</h3>
+            <p>suavemantacaro@gmail.com</p>
+            <p>suavemantacaro@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+          <div class="contact_info">
+            <span><i class="fas fa-phone-alt"></i></span>
+            <h3>Call Us</h3>
+            <p>+5999-5150313</p>
+            <p>+5999-5150313</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+          <div class="contact_info">
+            <span><i class="fas fa-clock"></i></span>
+            <h3>Working Hours</h3>
+            <p>Monday to Saterday :</p>
+            <p>14:00pm - 21:00pm</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt_120 xs_mt_70">
+        <div class="col-xl-5 wow fadeInUp" data-wow-duration="1s">
+          <div class="contact_map">
+            <iframe src="https://maps.google.com/maps/search/19 49 A Kaya Isaak%2C Willemstad%2C Curazao/@12.1394,-68.8646,17z?hl=en" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-7 m-auto wow fadeInUp" data-wow-duration="1s">
+          <form class="contact_form">
+            <h2>Do You have Any Questions?</h2>
+            <div class="row">
+              <div class="col-xl-6">
+                <input type="text" placeholder="Your Name" />
+              </div>
+              <div class="col-xl-6">
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div class="col-xl-6">
+                <input type="text" placeholder="Your Phone" />
+              </div>
+              <div class="col-xl-6">
+                <input type="text" placeholder="Subject" />
+              </div>
+              <div class="col-xl-12">
+                <textarea rows="7" placeholder="Write something Here"></textarea>
+                <button type="submit" class="common_btn">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================================== CONTACT US END ===================================== -->
+{% endblock %}
+{% comment %} AIzaSyDIgL7i4RJZObVo2GkGuc_IINMJTRTTwA8 {% endcomment %}
