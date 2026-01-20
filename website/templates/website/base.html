@@ -25,7 +25,7 @@
   </head>
 
   <body>
-    <!--  ===================================== TOPBAR START =====================================  -->
+    <!-- ===================================== TOPBAR START ===================================== -->
     <section class="topbar">
       <div class="container">
         <div class="row">
@@ -36,17 +36,22 @@
                   <i class="fas fa-map-marker-alt"></i> 19, 49 Kaya Isaac, Willemstad, Curaçao
                 </p>
               </li>
+
+              <!-- UPDATED: mailto href -->
               <li>
-                <a href="mailto:support@yourdomain.com">
+                <a href="mailto:suavemantacaro@gmail.com">
                   <i class="fas fa-envelope"></i>
                   suavemantacaro@gmail.com
                 </a>
               </li>
+
+              <!-- UPDATED: callto -> tel and correct number -->
               <li>
-                <a href="callto:+442099947740"><i class="fas fa-phone-alt"></i> +5999-5150313</a>
+                <a href="tel:+59995150313"><i class="fas fa-phone-alt"></i> +5999-5150313</a>
               </li>
             </ul>
           </div>
+
           <div class="col-xl-4 col-lg-3">
             <ul class="topbar_right d-flex flex-wrap">
               <li>
@@ -69,9 +74,9 @@
         </div>
       </div>
     </section>
-    <!--  ===================================== TOPBAR END =====================================  -->
+    <!-- ===================================== TOPBAR END ===================================== -->
 
-    <!--  ===================================== MENU START =====================================  -->
+    <!-- ===================================== MENU START ===================================== -->
     <nav class="navbar navbar-expand-lg main_menu">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="{% static 'images/logo/suave_logo2.png' %}" alt="BonFax" class="img-fluid" style="max-height: 90px;" /></a>
@@ -95,15 +100,6 @@
             </li>
           </ul>
           <ul class="menu_right d-flex flex-wrap">
-            <!--   <li><a href="#" class="menu_search"><i class="far fa-search"></i></a>
-                        <div class="search_form">
-                            <form>
-                                <span class="close_search"><i class="far fa-times"></i></span>
-                                <input type="text" placeholder="Search . . .">
-                                <button type="submit">search</button>
-                            </form>
-                        </div>
-                    </li>   -->
             <li>
               <a class="reservation" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">reservation</a>
             </li>
@@ -153,13 +149,13 @@
         </div>
       </div>
     </div>
-    <!--  ===================================== MENU END =====================================  -->
+    <!-- ===================================== MENU END ===================================== -->
 
     {% block main %}
 
     {% endblock %}
 
-    <!--  ===================================== FOOTER START =====================================  -->
+    <!-- ===================================== FOOTER START ===================================== -->
     <footer class="footer mt_180 xs_mt_130" style="background: url({% static 'images/footer_bg.jpg' %});">
       <div class="container">
         <div class="footer_subscribe">
@@ -204,28 +200,53 @@
               </ul>
             </div>
           </div>
+
           <div class="col-xl-2 col-sm-6 col-md-4 col-lg-2">
             <div class="footer_link">
-              <h4>Our Services</h4>
+              <h4>Therapeutic Services</h4>
               <ul>
                 <li>
-                  <a href="#">Facials</a>
+                  <a href="#">Therapeutic Massage</a>
                 </li>
                 <li>
-                  <a href="#">Waxing</a>
+                  <a href="#">Deep Tissue Massage</a>
                 </li>
                 <li>
-                  <a href="#">Message</a>
+                  <a href="#">Muscle Pain Therapy</a>
                 </li>
                 <li>
-                  <a href="#">Mineral Baths</a>
+                  <a href="#">Thai Massage</a>
                 </li>
                 <li>
-                  <a href="#">Body Treatments</a>
+                  <a href="#">Physiotherapy Support</a>
                 </li>
               </ul>
             </div>
           </div>
+
+          <div class="col-xl-2 col-sm-6 col-md-4 col-lg-2">
+            <div class="footer_link">
+              <h4>Special Care</h4>
+              <ul>
+                <li>
+                  <a href="#">Elderly Massage Care</a>
+                </li>
+                <li>
+                  <a href="#">Rehabilitation Massage</a>
+                </li>
+                <li>
+                  <a href="#">Full Body Scrub</a>
+                </li>
+                <li>
+                  <a href="#">Relaxation Therapy</a>
+                </li>
+                <li>
+                  <a href="#">Personalized Sessions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div class="col-xl-2 col-sm-6 col-md-4 col-lg-2 order-md-4">
             <div class="footer_link">
               <h4>Useful Link</h4>
@@ -242,11 +263,12 @@
               </ul>
             </div>
           </div>
+
           <div class="col-xl-3 col-md-6 col-lg-4 order-lg-4">
             <div class="footer_link">
               <h4>Contact Us</h4>
               <p>
-                <i class="fas fa-phone-alt"></i> +5999-5150313
+                <i class="fas fa-phone-alt"></i> <a href="tel:+59995150313" class="phone_link">+599 9 515 0313</a>
               </p>
               <p>
                 <i class="fas fa-envelope"></i> suavemantacaro@gmail.com
@@ -264,20 +286,24 @@
           <div class="col-12">
             <div class="footer_copyright">
               <p>
-                Copyright © <a href="index.html">SuaveManta</a> 2025. All Rights Reserved
+                Copyright © <a href="index.html">SuaveManta</a> 2026. All Rights Reserved
+                <br />
+                Created by
+                <a href="https://website.smartenovation.com/" target="_blank" rel="noopener">SmartEnovation</a>
+                with <i class="text-danger fas fa-heart"></i> in Curaçao
               </p>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <!--  ===================================== FOOTER END =====================================  -->
+    <!-- ===================================== FOOTER END ===================================== -->
 
-    <!--  ========================= SCROLL BUTTON START ===========================  -->
+    <!-- ========================= SCROLL BUTTON START =========================== -->
     <div class="scroll_btn">
       <span><i class="fas fa-arrow-alt-up"></i></span>
     </div>
-    <!--  ========================== SCROLL BUTTON END ===========================  -->
+    <!-- ========================== SCROLL BUTTON END =========================== -->
 
     <!-- jquery library js -->
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>

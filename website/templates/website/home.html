@@ -1,5 +1,4 @@
 {% extends 'website/base.html' %}
-
 {% load static %}
 
 {% block title %}
@@ -7,117 +6,118 @@
 {% endblock %}
 
 {% block main %}
-<style>
-  /* Layout */
-.about_text_center_user {
-  gap: 16px;
-}
+  <style>
+    /* Layout */
+    .about_text_center_user {
+      gap: 16px;
+    }
+    
+    .about_text_center_user_img {
+      width: 90px;
+      height: 90px;
+    }
+    
+    .about_text_center_user_text h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+    
+    .about_text_center_user_text h3 span {
+      font-size: 13px;
+      font-weight: normal;
+      opacity: 0.7;
+    }
+    
+    /* Call row */
+    .call_row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .call_icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: #b7d7b0; /* matches your green tone */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    
+    .phone_link {
+      font-weight: 600;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Actions */
+    .contact_actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    /* Buttons */
+    .contact_btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Call button */
+    .call_btn {
+      background: #ffffff;
+      color: #000;
+    }
+    
+    /* WhatsApp button */
+    .whatsapp_btn {
+      background: #25d366;
+      color: #ffffff;
+      border-color: #25d366;
+    }
+    
+    .contact_btn:hover {
+      opacity: 0.9;
+    }
+    
+    /* Mobile spacing */
+    @media (max-width: 576px) {
+      .contact_actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 
-.about_text_center_user_img {
-  width: 90px;
-  height: 90px;
-}
-
-.about_text_center_user_text h3 {
-  margin-bottom: 6px;
-  font-size: 18px;
-}
-
-.about_text_center_user_text h3 span {
-  font-size: 13px;
-  font-weight: normal;
-  opacity: 0.7;
-}
-
-/* Call row */
-.call_row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.call_icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  background: #b7d7b0; /* matches your green tone */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-
-.phone_link {
-  font-weight: 600;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Actions */
-.contact_actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* Buttons */
-.contact_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-/* Call button */
-.call_btn {
-  background: #ffffff;
-  color: #000;
-}
-
-/* WhatsApp button */
-.whatsapp_btn {
-  background: #25d366;
-  color: #ffffff;
-  border-color: #25d366;
-}
-
-.contact_btn:hover {
-  opacity: 0.9;
-}
-
-/* Mobile spacing */
-@media (max-width: 576px) {
-  .contact_actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-</style>
   <!-- ===================================== BANNER START ===================================== -->
   <section class="banner">
     <div class="row banner_slider">
+      <!-- Slide 1 -->
       <div class="col-12">
         <div class="single_slider" style="background: url({% static 'images/suave_bed2.jpeg' %});">
           <div class="container">
             <div class="row">
               <div class="col-xl-6 col-md-8">
                 <div class="single_slider_text wow fadeInUp" data-wow-duration="1s">
-                  <h5>welcome To Our Spa Salon</h5>
-                  <h1>Grow Up Your Skin With The Power Of Natural <span>Service!!</span></h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmt mod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h5>Welcome to Suavemanta Therapy</h5>
+                  <h1>Personalized Therapeutic Massage <span>& Physiotherapy</span></h1>
+                  <p>Suavemanta Therapy offers personalized therapeutic massage and rehabilitation physiotherapy, carefully adapted to each client’s physical needs, pain levels, and recovery goals.</p>
                   <ul class="d-flex flex-wrap">
                     <li>
-                      <a class="common_btn" href="#">get started</a>
+                      <a class="common_btn" href="{% url 'contact' %}">Book a Session</a>
                     </li>
                     <li>
                       <a class="venobox play_btn" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xsnCYCEbdr4"><i class="fas fa-play"></i></a>
-                      <span>Intro Video</span>
+                      <span>About Suavemanta</span>
                     </li>
                   </ul>
                 </div>
@@ -126,22 +126,24 @@
           </div>
         </div>
       </div>
+
+      <!-- Slide 2 -->
       <div class="col-12">
         <div class="single_slider" style="background: url({% static 'images/suave_bed2.jpeg' %});">
           <div class="container">
             <div class="row">
               <div class="col-xl-6 col-md-8">
                 <div class="single_slider_text wow fadeInUp" data-wow-duration="1s">
-                  <h5>welcome To Our Spa Salon</h5>
-                  <h1>Glow Your Face And Vitality With Our Best <span>Service!!</span></h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmt mod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h5>Therapy Focused on Muscle Recovery</h5>
+                  <h1>Relief From Muscle Pain <span>& Deep Tissue Therapy</span></h1>
+                  <p>Specialized in deep tissue massage, muscle therapy, Thai massage, and therapeutic treatments designed to relieve chronic pain, tension, and muscular stress.</p>
                   <ul class="d-flex flex-wrap">
                     <li>
-                      <a class="common_btn" href="#">get started</a>
+                      <a class="common_btn" href="{% url 'services' %}">Our Treatments</a>
                     </li>
                     <li>
                       <a class="venobox play_btn" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xsnCYCEbdr4"><i class="fas fa-play"></i></a>
-                      <span>Intro Video</span>
+                      <span>Therapy Methods</span>
                     </li>
                   </ul>
                 </div>
@@ -150,22 +152,24 @@
           </div>
         </div>
       </div>
+
+      <!-- Slide 3 -->
       <div class="col-12">
         <div class="single_slider" style="background: url({% static 'images/suave_bed2.jpeg' %});">
           <div class="container">
             <div class="row">
               <div class="col-xl-6 col-md-8">
                 <div class="single_slider_text wow fadeInUp" data-wow-duration="1s">
-                  <h5>welcome To Our Spa Salon</h5>
-                  <h1>Make Your Look Even More Perfect With Our <span>Salon.</span></h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmt mod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h5>A Quiet, Private Healing Space</h5>
+                  <h1>Relax, Recover, <span>and Restore Your Body</span></h1>
+                  <p>A private and peaceful environment offering full body scrubs, elderly care massage, and attentive, one-on-one therapy sessions scheduled to fit your time and comfort.</p>
                   <ul class="d-flex flex-wrap">
                     <li>
-                      <a class="common_btn" href="#">get started</a>
+                      <a class="common_btn" href="{% url 'contact' %}">Schedule Your Time</a>
                     </li>
                     <li>
                       <a class="venobox play_btn" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xsnCYCEbdr4"><i class="fas fa-play"></i></a>
-                      <span>Intro Video</span>
+                      <span>Client Experience</span>
                     </li>
                   </ul>
                 </div>
@@ -177,58 +181,6 @@
     </div>
   </section>
   <!-- ===================================== BANNER END ===================================== -->
-
-  <!-- ===================================== FUTURED SERVICES START  ===================================== -->
-  <section class="futured_services mt_115 xs_mt_70">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-7 col-md-10 m-auto wow fadeInUp" data-wow-duration="1s">
-          <div class="section_heading mb_50 xs_mb_55">
-            <h5>What We're Offering</h5>
-            <h3>For Your Future Services</h3>
-          </div>
-        </div>
-      </div>
-      <div class="row futured_slider wow fadeInUp" data-wow-duration="1s">
-        <div class="col-xl-3">
-          <div class="featured_service_single">
-            <span><i class="fas fa-user-shield"></i></span>
-            <h3>Spa Membership</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia .</p>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="featured_service_single">
-            <span><i class="fas fa-restroom"></i></span>
-            <h3>Referal Program</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia .</p>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="featured_service_single">
-            <span><i class="fas fa-gift"></i></span>
-            <h3>Gifts Certificates</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia .</p>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="featured_service_single">
-            <span><i class="fas fa-comment-dots"></i></span>
-            <h3>Give Us a Feed Back</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia .</p>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="featured_service_single">
-            <span><i class="fas fa-restroom"></i></span>
-            <h3>Referal Program</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia .</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===================================== FUTURED SERVICES END ===================================== -->
 
   <!-- ===================================== ABOUT START ===================================== -->
   <section class="about mt_120 xs_mt_70">
@@ -242,75 +194,56 @@
                 <h3>Welcome to SuaveManta</h3>
               </div>
             </div>
+
             <div class="col-12">
-  <div class="about_text">
-    <div class="about_text_center">
-      <p>
-        Therapeutic massages and physiotherapy personalized rehabilitation...private space...thinking about the client's privacy
-      </p>
+              <div class="about_text">
+                <div class="about_text_center">
+                  <p>Suavemanta Therapy offers personalized therapeutic massage and rehabilitation physiotherapy according to each client’s needs, in a private and quiet space focused on comfort and recovery.</p>
 
-      <div class="about_text_center_user d-flex flex-wrap align-items-center">
-        <!-- Image -->
-        <div class="about_text_center_user_img">
-          <img src="{% static 'images/about_small_img.png' %}" alt="about" class="img-fluid w-100" />
-        </div>
+                  <div class="about_text_center_user d-flex flex-wrap align-items-center">
+                    <div class="about_text_center_user_img">
+                      <img src="{% static 'images/about_small_img.png' %}" alt="Maria" class="img-fluid w-100" />
+                    </div>
 
-        <!-- Text -->
-        <div class="about_text_center_user_text">
-          <h3>Maria <span>(CEO Of SuaveManta)</span></h3>
+                    <div class="about_text_center_user_text">
+                      <h3>Maria <span>(Suavemanta Therapy)</span></h3>
 
-          <!-- Call info -->
-          <div class="about_text_center_user_call">
-            <div class="call_row d-flex align-items-center">
-              <span class="call_icon">
-                <i class="fas fa-phone-alt"></i>
-              </span>
+                      <div class="about_text_center_user_call">
+                        <div class="call_row d-flex align-items-center">
+                          <span class="call_icon"><i class="fas fa-phone-alt"></i></span>
 
-              <p>
-                Call For Booking Appointment Details:
-                <a href="tel:+59995150313" class="phone_link">+599 9 515 0313</a>
-              </p>
-            </div>
+                          <p>
+                            Call for booking:
+                            <a href="tel:+59995150313" class="phone_link">+599 9 515 0313</a>
+                          </p>
+                        </div>
 
-            <!-- Actions -->
-            <div class="contact_actions">
-              <a href="tel:+59995150313" class="contact_btn call_btn">
-                <i class="fas fa-phone-alt"></i>
-                Call
-              </a>
+                        <div class="contact_actions">
+                          <a href="tel:+59995150313" class="contact_btn call_btn">
+                            <i class="fas fa-phone-alt"></i>
+                            Call
+                          </a>
 
-              <a
-                href="https://wa.me/59995150313?text=Hola%20Suavemanta%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20terapias."
-                target="_blank"
-                rel="noopener"
-                class="contact_btn whatsapp_btn"
-              >
-                <i class="fab fa-whatsapp"></i>
-                WhatsApp
-              </a>
+                          <a href="https://wa.me/59995150313?text=Hola%20Suavemanta%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20terapias." target="_blank" rel="noopener" class="contact_btn whatsapp_btn">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="description">Each session is guided by attentive listening and tailored techniques—ideal for muscle pain, chronic tension, and recovery support. Treatments can include deep tissue work, Thai massage techniques, and gentle care depending on your condition and comfort.</p>
+
+                <p class="description">Suavemanta Therapy adapts to a schedule designed for your time and the right moment to receive the therapies, offering a calm environment where relaxation and rehabilitation come together.</p>
+
+                <a class="common_btn mt_25" href="{% url 'about' %}">Read More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <p class="description">
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-
-    <p class="description">
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-
-    <a class="common_btn mt_25" href="{% url 'about' %}">Read More</a>
-  </div>
-</div>
-
-            
-          </div>
-        </div>
         <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="about_img">
             <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xsnCYCEbdr4"><i class="fas fa-play"></i></a>
@@ -324,79 +257,6 @@
   </section>
   <!-- ===================================== ABOUT END ===================================== -->
 
-  <!-- ===================================== CATEGORIES START ===================================== -->
-  <section class="categories mt_115 xs_mt_70">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-7 col-lg-8 col-md-10 m-auto wow fadeInUp" data-wow-duration="1s">
-          <div class="section_heading mb_35">
-            <h5>Top Categories</h5>
-            <h3>Explore Categories</h3>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_1.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Aroma Therapy</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_2.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Sauna Relax</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_3.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Facials</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_4.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Mineral Baths</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_5.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Body Treatments</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_6.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Waxing</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_7.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Massage</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
-          <div class="single_categories">
-            <span><img src="{% static 'images/category_icon_8.png' %}" alt="category" class="img-fluid w-100" /></span>
-            <h4>Geothermal Spa</h4>
-            <p>Lorem ipsum dolor sit amet consectetur into adipiscing elit</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===================================== CATEGORIES END ===================================== -->
-
   <!-- ===================================== SERVICES START ===================================== -->
   <section class="services mt_115 xs_mt_70" style="background: url(images/background_shapes.jpg);">
     <div class="container">
@@ -408,194 +268,177 @@
           </div>
         </div>
       </div>
+
       <div class="row">
+        <!-- 1 -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/service_img_1.jpg' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/therapeutic_massage.webp' %}" alt="Therapeutic Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Facial Therapy</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Therapeutic Massage</a>
+              <p>Personalized massage focused on muscle tension relief, circulation, and overall well-being.</p>
               <ul>
                 <li>
-                  <i class="fas fa-play"></i> 5 Sessions
+                  <i class="fas fa-play"></i> Personalized session
                 </li>
                 <li>
-                  <i class="fas fa-user"></i> 291 Clients
+                  <i class="fas fa-user"></i> Pain & tension relief
                 </li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>240</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 2 -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/service_img_2.jpg' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/deep_tissue.webp' %}" alt="Deep Tissue Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Candle Message</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Deep Tissue Massage</a>
+              <p>Firm-pressure work to release deep muscle tension, knots, and chronic stiffness.</p>
               <ul>
                 <li>
-                  <i class="fas fa-play"></i> 5 Sessions
+                  <i class="fas fa-play"></i> Deep muscle focus
                 </li>
                 <li>
-                  <i class="fas fa-user"></i> 145 Clients
+                  <i class="fas fa-user"></i> Chronic tension relief
                 </li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>98</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 3 -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/service_img_3.jpg' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/muscle_pain_therapy.webp' %}" alt="Muscle Pain Therapy" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Stone Spa</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Muscle Pain Therapy</a>
+              <p>Targeted treatment for muscle pain, stiffness, and reduced mobility—neck, back, shoulders, and legs.</p>
               <ul>
                 <li>
-                  <i class="fas fa-play"></i> 5 Sessions
+                  <i class="fas fa-play"></i> Targeted treatment
                 </li>
                 <li>
-                  <i class="fas fa-user"></i> 44 Clients
+                  <i class="fas fa-user"></i> Recovery support
                 </li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>20</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 4 -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/service_img_4.jpg' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/thai_massage.webp' %}" alt="Thai Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Body Treatments</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Thai Massage</a>
+              <p>Assisted stretching and pressure techniques to improve flexibility, mobility, and body balance.</p>
               <ul>
                 <li>
-                  <i class="fas fa-play"></i> 5 Sessions
+                  <i class="fas fa-play"></i> Stretch & pressure
                 </li>
                 <li>
-                  <i class="fas fa-user"></i> 49 Clients
+                  <i class="fas fa-user"></i> Flexibility support
                 </li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>38</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 5 -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/service_img_5.jpg' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/elderly_massage.webp' %}" alt="Elderly Massage Care" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Aroma Therapy</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Elderly Massage Care</a>
+              <p>Gentle and attentive care designed for elderly clients—comfort, circulation, and safe mobility support.</p>
               <ul>
                 <li>
-                  <i class="fas fa-play"></i> 5 Sessions
+                  <i class="fas fa-play"></i> Gentle approach
                 </li>
                 <li>
-                  <i class="fas fa-user"></i> 621 Clients
+                  <i class="fas fa-user"></i> Comfort & mobility
                 </li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>485</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 6 -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/service_img_6.jpg' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/rehab_physiotherapy.webp' %}" alt="Rehabilitation Physiotherapy Support" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Sauna Relax</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Rehabilitation Physiotherapy Support</a>
+              <p>Supportive rehabilitation care focused on mobility, function, and recovery following injury or limitation.</p>
               <ul>
                 <li>
-                  <i class="fas fa-play"></i> 5 Sessions
+                  <i class="fas fa-play"></i> Rehab support
                 </li>
                 <li>
-                  <i class="fas fa-user"></i> 257 Clients
+                  <i class="fas fa-user"></i> Mobility & recovery
                 </li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>203</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <a class="common_btn" href="{% url 'services' %}">All Services</a>
     </div>
   </section>
@@ -611,26 +454,26 @@
             <h3>Why Choose SuaveManta</h3>
           </div>
           <div class="why_choose_text">
-            <p>Excepteur sint occaecat cupidatat non proident,sunt inculpk qui officia deserunt mollit anim id est laborum.sed do eiusmod.</p>
+            <p>Private, quiet, and focused on your needs—each session is personalized with attentive listening and the right techniques for your body.</p>
             <ul>
               <li>
-                <h4>Qualified Staff</h4>
-                <span>Duis aute irure dolor in Cillumr reprehenderit in voluptate.</span>
+                <h4>Personalized Care</h4>
+                <span>Treatments adjusted to your condition, comfort, and goals.</span>
               </li>
               <li>
-                <h4>Relax Zones</h4>
-                <span>Duis aute irure dolor in Cillumr reprehenderit in voluptate.</span>
+                <h4>Therapy for Muscle Pain</h4>
+                <span>Specialized techniques for tension, stiffness, and recovery.</span>
               </li>
               <li>
-                <h4>Variety Of Care</h4>
-                <span>Duis aute irure dolor in Cillumr reprehenderit in voluptate.</span>
+                <h4>Quiet Private Space</h4>
+                <span>A calm environment designed for relaxation and healing.</span>
               </li>
               <li>
-                <h4>Herbal Product</h4>
-                <span>Duis aute irure dolor in Cillumr reprehenderit in voluptate.</span>
+                <h4>Flexible Scheduling</h4>
+                <span>Sessions planned around your time and best moment to receive therapy.</span>
               </li>
             </ul>
-            <a class="common_btn mt_25" href="#">read more</a>
+            <a class="common_btn mt_25" href="{% url 'about' %}">read more</a>
           </div>
         </div>
         <div class="col-xl-7 col-lg-6 col-sm-8 col-md-8 col-xxl-6 wow fadeInUp" data-wow-duration="1s">
@@ -648,7 +491,6 @@
     </div>
   </section>
   <!-- ===================================== WHY CHOOSE END ===================================== -->
-    
 
   <!-- ===================================== TEAM START ===================================== -->
   <section class="team mt_115 xs_mt_65">
@@ -661,33 +503,38 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-xl-4 col-sm-6 col-lg-4 wow fadeInUp m-auto" data-wow-duration="1s">
           <div class="single_team">
             <div class="single_team_img">
-              <img src="{% static 'images/team_img_1.jpg' %}" alt="team" class="img-fluid w-100" />
+              <!-- Cartoon/Anime-style placeholder image (replace later with your real image) -->
+              <img src="{% static 'images/maria.webp' %}" alt="Maria - Therapist" class="img-fluid w-100" />
+
               <ul>
                 <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61566022173650" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61566022173650" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61566022173650" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61566022173650" target="_blank" rel="noopener"><i class="fab fa-pinterest-p"></i></a>
                 </li>
               </ul>
             </div>
+
             <div class="single_team_text">
-              <a class="title" href="team_details.html">Maria</a>
-              <p>Fysio Therapeut and Massager</p>
+              <a class="title" href="#">Maria</a>
+              <p>Physiotherapy & Therapeutic Massage</p>
             </div>
           </div>
         </div>
-     
+      </div>
+    </div>
   </section>
   <!-- ===================================== TEAM END ===================================== -->
 
@@ -698,84 +545,72 @@
         <div class="col-xl-7 col-md-10 m-auto wow fadeInUp" data-wow-duration="1s">
           <div class="section_heading mb_35">
             <h5>our testimonial</h5>
-            <h3>What Our Clients Says</h3>
+            <h3>What Our Clients Say</h3>
           </div>
         </div>
       </div>
+
       <div class="row testi_slider wow fadeInUp" data-wow-duration="1s">
         <div class="col-xl-4">
           <div class="single_testimonial">
             <div class="single_testimonial_img">
-              <img src="{% static 'images/client_1.jpg' %}" alt="client" class="img-fluid w-100" />
+              <img src="https://i.pravatar.cc/400?img=12" alt="client" class="img-fluid w-100" />
             </div>
             <div class="single_testimonial_text">
               <p class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </p>
-              <p class="cliect_comment">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
-              <h3 class="title">Courtney Henry</h3>
-              <p class="designation">Sr. UX/UI Designer</p>
+              <p class="cliect_comment">I came in with tight shoulders and lower back pain, and Maria immediately found the problem areas. The deep tissue work was strong but very controlled — I felt relief the same day.</p>
+              <h3 class="title">Daniel R.</h3>
+              <p class="designation">Office Worker</p>
             </div>
           </div>
         </div>
+
         <div class="col-xl-4">
           <div class="single_testimonial">
             <div class="single_testimonial_img">
-              <img src="{% static 'images/client_2.jpg' %}" alt="client" class="img-fluid w-100" />
+              <img src="https://i.pravatar.cc/400?img=32" alt="client" class="img-fluid w-100" />
             </div>
             <div class="single_testimonial_text">
               <p class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </p>
-              <p class="cliect_comment">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
-              <h3 class="title">Rishmika Lane</h3>
-              <p class="designation">Software Engineer</p>
+              <p class="cliect_comment">The space is quiet and private, and the session felt truly personalized. Maria listened carefully and adjusted the pressure throughout. I left relaxed and lighter.</p>
+              <h3 class="title">Samantha L.</h3>
+              <p class="designation">Teacher</p>
             </div>
           </div>
         </div>
+
         <div class="col-xl-4">
           <div class="single_testimonial">
             <div class="single_testimonial_img">
-              <img src="{% static 'images/client_3.jpg' %}" alt="client" class="img-fluid w-100" />
+              <img src="https://i.pravatar.cc/400?img=48" alt="client" class="img-fluid w-100" />
             </div>
             <div class="single_testimonial_text">
               <p class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </p>
-              <p class="cliect_comment">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
-              <h3 class="title">Letitia Shelton</h3>
-              <p class="designation">Content Writter</p>
+              <p class="cliect_comment">My mom is elderly and needs gentle care. Maria was patient, respectful, and very professional. My mom slept better that night and asked to come back.</p>
+              <h3 class="title">Carla M.</h3>
+              <p class="designation">Caregiver</p>
             </div>
           </div>
         </div>
+
         <div class="col-xl-4">
           <div class="single_testimonial">
             <div class="single_testimonial_img">
-              <img src="{% static 'images/client_2.jpg' %}" alt="client" class="img-fluid w-100" />
+              <img src="https://i.pravatar.cc/400?img=7" alt="client" class="img-fluid w-100" />
             </div>
             <div class="single_testimonial_text">
               <p class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </p>
-              <p class="cliect_comment">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
-              <h3 class="title">Rishmika Lane</h3>
-              <p class="designation">Software Engineer</p>
+              <p class="cliect_comment">The Thai massage stretching helped a lot with my hip mobility. It wasn’t just “relaxing massage” — it felt like real therapeutic work with a plan.</p>
+              <h3 class="title">Jason P.</h3>
+              <p class="designation">Gym Member</p>
             </div>
           </div>
         </div>
@@ -783,6 +618,4 @@
     </div>
   </section>
   <!-- ===================================== TESTIMONIAL END ===================================== -->
-
 {% endblock %}
-I

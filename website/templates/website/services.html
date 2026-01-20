@@ -1,5 +1,4 @@
 {% extends 'website/base.html' %}
-
 {% load static %}
 
 {% block title %}
@@ -19,10 +18,10 @@
               <h1>our services</h1>
               <ul>
                 <li>
-                  <a href="#"><i class="fas fa-home"></i> home</a>
+                  <a href="{% url 'home' %}"><i class="fas fa-home"></i> home</a>
                 </li>
                 <li>
-                  <a href="#">services</a>
+                  <a href="{% url 'services' %}">services</a>
                 </li>
               </ul>
             </div>
@@ -41,254 +40,231 @@
   <section class="services_page mt_95 xs_mt_45">
     <div class="container">
       <div class="row">
+
+        <!-- Therapeutic Massage -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/therapeutic_massage.webp' %}" alt="Therapeutic Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Therapeutic Massage</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Therapeutic Massage</a>
+              <p>
+                Personalized therapeutic massage focused on relieving muscle tension, improving circulation,
+                and supporting overall physical well-being.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 291 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Personalized session</li>
+                <li><i class="fas fa-user"></i> Pain & tension relief</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>240</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Deep Tissue Massage -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/deep_tissue.webp' %}" alt="Deep Tissue Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Deep tissue massage</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Deep Tissue Massage</a>
+              <p>
+                Firm-pressure massage targeting deep muscle layers to release chronic tension,
+                knots, and long-standing muscular discomfort.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 145 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Deep muscle focus</li>
+                <li><i class="fas fa-user"></i> Chronic tension relief</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>98</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Muscle Pain Therapy -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/muscle_pain_therapy.webp' %}" alt="Muscle Pain Therapy" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Relaxing massage</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Muscle Pain Therapy</a>
+              <p>
+                Targeted therapy for muscle pain, stiffness, and limited mobility — especially effective
+                for neck, shoulders, back, and legs.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 44 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Targeted treatment</li>
+                <li><i class="fas fa-user"></i> Recovery support</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>20</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Thai Massage -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/thai_massage.webp' %}" alt="Thai Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Lymphatic drainage</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Thai Massage</a>
+              <p>
+                Traditional Thai massage combining assisted stretching and pressure techniques
+                to improve flexibility, mobility, and body balance.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 49 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Stretch & pressure</li>
+                <li><i class="fas fa-user"></i> Flexibility support</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>38</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Elderly Massage Care -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/elderly_massage.webp' %}" alt="Elderly Massage Care" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">full body exfoliation</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Elderly Massage Care</a>
+              <p>
+                Gentle and attentive massage designed for elderly clients, focusing on comfort,
+                circulation, and safe mobility support.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 621 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Gentle approach</li>
+                <li><i class="fas fa-user"></i> Comfort & mobility</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>485</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Rehabilitation Physiotherapy -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/rehab_physiotherapy.webp' %}" alt="Rehabilitation Physiotherapy Support" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">hot stones full body</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Rehabilitation Physiotherapy Support</a>
+              <p>
+                Supportive rehabilitation care focused on improving mobility, function, and comfort
+                following injury or physical limitation.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 257 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Rehab support</li>
+                <li><i class="fas fa-user"></i> Mobility & recovery</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>203</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Full Body Scrub -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/full_body_scrub.webp' %}" alt="Full Body Scrub" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Yoga Facial</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Full Body Scrub</a>
+              <p>
+                Refreshing full body exfoliation designed to cleanse the skin, improve texture,
+                and leave you feeling renewed and relaxed.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 257 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Skin renewal</li>
+                <li><i class="fas fa-user"></i> Relaxing care</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>203</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Back / Neck / Shoulder -->
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s">
           <div class="services_item">
             <div class="services_img">
-              <img src="{% static 'images/200*250.webp' %}" alt="services" class="img-fluid w-100" />
+              <img src="{% static 'images/services/back_neck.webp' %}" alt="Back Neck Shoulder Massage" class="img-fluid w-100" />
               <a href="#"><i class="fas fa-heart"></i></a>
             </div>
             <div class="services_text">
-              <a class="title" href="service_details.html">Relaxing back massage</a>
-              <p>Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+              <a class="title" href="{% url 'contact' %}">Back, Neck & Shoulder Relief</a>
+              <p>
+                Focused massage targeting common tension areas caused by stress, posture strain,
+                and daily physical activity.
+              </p>
               <ul>
-                <li>
-                  <i class="fas fa-play"></i> 5 Sessions
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> 257 Clients
-                </li>
+                <li><i class="fas fa-play"></i> Targeted relief</li>
+                <li><i class="fas fa-user"></i> Stress & posture</li>
               </ul>
               <div class="services_btn_area">
-                <a class="read_btn" href="service_details.html">read more</a>
+                <a class="read_btn" href="{% url 'contact' %}">book / ask</a>
                 <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>203</span>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>5.0</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
